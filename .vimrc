@@ -21,7 +21,9 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/nerdtree'
 Plugin 'lervag/vimtex'
 Plugin 'ervandew/supertab'
-Plugin 'ludovicchabant/vim-gutentags'
+Plugin 'hashivim/vim-terraform'
+Plugin 'tpope/vim-surround'
+Plugin 'preservim/vim-markdown'
 
 "All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -60,7 +62,7 @@ let g:ale_linters = {'python': ['flake8','mypy']}
 
 "" set syntax highlighting color scheme from vim-awesome-colorschemes
 set background=dark
-colorscheme solarized8
+colorscheme apprentice
 
 " " filetree display options
 map <C-n> :NERDTreeToggle<CR>
@@ -71,9 +73,6 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
-
-let g:vimtex_view_general_viewer = 'open'
-let g:vimtex_view_general_options = '-a Skim'
 
 autocmd BufNewFile  *.sh  call    Generate_bash()
 
@@ -91,3 +90,17 @@ function! WC()
 endfunction
 
 command WC call WC()
+
+set tabstop=4      " Displays a tab character as 4 spaces
+set shiftwidth=4   " Sets the number of spaces for auto-indentation and << >> commands
+set expandtab      " Converts tabs to spaces when you press the Tab key
+
+
+
+" Change cursor shape in different modes (see :help cursor-shape)
+let &t_EI = "\033[2 q" " NORMAL  █
+let &t_SI = "\033[5 q" " INSERT  |
+
+let NERDTreeShowLineNumbers=1
+
+let g:vim_markdown_folding_disabled = 1

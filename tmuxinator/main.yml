@@ -1,0 +1,14 @@
+---
+name: main
+project_root: "/Users/spencer.scott"
+windows:
+- dev:
+    layout: d424,232x63,0,0{131x63,0,0,0,100x63,132,0[100x31,132,0,2,100x31,132,32,4]}
+    panes:
+    - cd /Users/spencer.scott
+    - cd /Users/spencer.scott
+    - cd /Users/spencer.scott
+- writing:
+    layout: bc60,232x63,0,0,3
+    panes:
+    - cd /Users/spencer.scott
