@@ -24,6 +24,7 @@ Plugin 'ervandew/supertab'
 Plugin 'hashivim/vim-terraform'
 Plugin 'tpope/vim-surround'
 Plugin 'preservim/vim-markdown'
+Plugin 'tmux-plugins/vim-tmux-focus-events'
 
 "All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -104,3 +105,7 @@ let &t_SI = "\033[5 q" " INSERT  |
 let NERDTreeShowLineNumbers=1
 
 let g:vim_markdown_folding_disabled = 1
+
+" allow buffer update without input
+" needs Plugin 'tmux-plugins/vim-tmux-focus-events' to work
+set autoread
